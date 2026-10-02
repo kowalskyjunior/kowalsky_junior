@@ -265,6 +265,10 @@
       display: none;
     }
 
+    .mobile-nav {
+      display: none;
+    }
+
     /* HERO */
     .hero {
       position: relative;
@@ -1007,25 +1011,33 @@
         display: inline-grid;
       }
 
-      .nav.menu-open .nav-links {
+      .nav-links {
+        display: none;
+      }
+
+      .nav.menu-open .mobile-nav {
         position: absolute;
-        top: calc(100% + 1px);
-        right: 0;
-        left: 0;
+        top: 100%;
+        right: 16px;
+        left: 16px;
         display: grid;
         gap: 0;
-        padding: 10px;
+        padding: 8px;
         border: 1px solid var(--line);
         border-top: 0;
+        border-radius: 0 0 12px 12px;
         background: var(--surface);
+        box-shadow: 0 18px 38px -28px var(--shadow);
       }
 
-      .nav.menu-open .nav-links a {
+      .nav.menu-open .mobile-nav a {
         padding: 13px 12px;
         border-bottom: 1px solid var(--line);
+        color: var(--ink-soft);
+        font-size: 13px;
       }
 
-      .nav.menu-open .nav-links a:last-child {
+      .nav.menu-open .mobile-nav a:last-child {
         border-bottom: 0;
       }
 
@@ -1214,7 +1226,7 @@
         <a class="nav-cta" href="#contato">contato ↗</a>
       </div>
 
-      <nav class="nav-links" id="mobileNav" aria-label="Navegação mobile">
+      <nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile">
         <a href="#sobre">Sobre</a>
         <a href="#experiencia">Experiência</a>
         <a href="#skills">Stack</a>
